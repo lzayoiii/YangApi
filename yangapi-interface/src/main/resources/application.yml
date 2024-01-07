@@ -1,0 +1,10 @@
+server:
+  port: 8589
+  servlet:
+    context-path: /api
+
+
+yangsign:
+  secret-key: abcdefg
+  access-key: yang
+

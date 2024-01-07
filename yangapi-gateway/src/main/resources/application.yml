@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: name_path_route
+          uri: http://localhost:8589
+          predicates:
+            - Path=/api/name/**
+server:
+  port: 8090
+
+
+dubbo:
+  application:
+    name: yangapi-gateway
+  registry:
+    address: zookeeper://${zookeeper.address:127.0.0.1}:2181
